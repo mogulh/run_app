@@ -8,6 +8,7 @@ import 'package:run_app/auth/screens/login.dart';
 import 'package:run_app/auth/services/auth_service.dart';
 import 'package:run_app/env.dart';
 import 'package:run_app/runs/screens/home.dart';
+import 'package:run_app/runs/screens/nav_scree.dart';
 
 void main() async {
   await GetStorage.init();
@@ -26,7 +27,7 @@ void main() async {
     debugShowCheckedModeBanner: false,
     getPages: [
       GetPage(name: "/login", page: () => const MyApp()),
-      GetPage(name: "/", page: () => const HomeScreen()),
+      GetPage(name: "/", page: () => const NavScreen()),
     ],
   ));
 }

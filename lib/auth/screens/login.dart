@@ -70,6 +70,7 @@ class LoginScreen extends StatelessWidget {
                       height: 10,
                     ),
                     RoundedLoadingButton(
+                        animateOnTap: false,
                         borderRadius: 8,
                         color: Pallete.secColor,
                         controller: ctrl.btnCtrl,

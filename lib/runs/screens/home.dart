@@ -12,43 +12,39 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            "RunApp",
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
-        body: Container(
-          color: Colors.white,
-          padding: const EdgeInsets.all(8),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const InfoCard(
-                  title: "Distance Covered",
-                  value: 100,
-                  units: "m",
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    InfoCard(
-                      title: "Top Speed",
-                      value: 100,
-                      units: "m/s",
-                    ),
-                    InfoCard(
-                      title: "Total Elevation",
-                      value: 100,
-                      units: "m",
-                    ),
-                  ],
-                )
-              ],
+    return SafeArea(
+      child: Scaffold(
+          backgroundColor: Pallete.secColor,
+          body: Container(
+            padding: const EdgeInsets.all(8),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const InfoCard(
+                    title: "Distance Covered",
+                    value: 100,
+                    units: "m",
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      InfoCard(
+                        title: "Top Speed",
+                        value: 100,
+                        units: "m/s",
+                      ),
+                      InfoCard(
+                        title: "Total Elevation",
+                        value: 100,
+                        units: "m",
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
-          ),
-        ));
+          )),
+    );
   }
 }
 
